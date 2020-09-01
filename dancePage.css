@@ -1,0 +1,194 @@
+
+    * {box-sizing: border-box}
+
+    .oneline {
+    display: inline-block;
+    }
+
+    .container{
+        position:relative;
+        text-align:center;
+        color:white;
+    }
+
+    .centered{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size:100px;
+        font-family:Impact, Charcoal, sans-serif;
+        color:#E2D2BE;
+        text-shadow: 10px 10px #5C615D;
+    }
+
+    .copyright{
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size:10px;
+        font-family:Arial;
+        color:rgb(255, 255, 255);
+        text-shadow: 1px 1px rgb(153, 153, 153);
+    }
+
+    .crop {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: static;
+        
+    }
+
+    .crop_square{
+        object-fit:cover;
+
+    }
+
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    /* Set height of body and the document to 100% to enable "full page tabs" */
+    body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    }
+
+    /* Style tab links */
+    .tablink {
+    background-color:rgb(60, 71, 60);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-family:Impact, Charcoal, sans-serif;
+    width: 25%;
+    }
+
+    .tablink:hover {
+    background-color: #777;
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    font-family:Impact, Charcoal, sans-serif;
+    /*height: 100%;*/
+    }
+
+    #Home {background-color: rgb(36, 48, 36);}
+    #DanceCategories {background-color: rgb(31, 44, 31);}
+    #Contact {background-color: rgb(31, 44, 31);}
+    #About {background-color: rgb(31, 44, 31);}
+
+
+    /*dance categories*/
+
+    .column {
+    float: left;
+    padding: 10px
+    }
+
+    .left{
+        width: 30%
+    }
+
+    .mid{
+        width: 20%
+    }
+
+    .right{
+        width: 50%
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 30px;
+
+    }
+
+    /*******************/
+    /*individual photos*/
+    /*******************/
+    .zoom {
+        position: relative;
+        
+        /* transition: transform .2s; Animation */
+    }
+
+    .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding-left: 100px;
+    }
+
+    .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    }
+
+    .zoom:hover .image {
+    opacity: 0.5;
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .zoom:hover .middle {
+    opacity: 1;
+    }
+    
+    .text {
+    color: white;
+    font-size: 40px;
+    padding: 16px 32px;
+    }
+
+    /* .a: link{
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* a: visited{
+        text-decoration: none;
+    } */
+
+    /* .a: hover {
+        color: rgb(92, 129, 92);
+    }  */ 
+    a:link {
+        color: white;
+        text-decoration: underline;
+      }
+      
+      a:visited {
+        color:rgb(133, 156, 133);
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      a:active {
+        text-decoration: underline;
+      }

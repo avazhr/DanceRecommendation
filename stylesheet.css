@@ -1,0 +1,203 @@
+* {box-sizing: border-box}
+
+.container{
+    position:relative;
+    text-align:center;
+    color:white;
+}
+
+.centered{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:100px;
+    font-family:Impact, Charcoal, sans-serif;
+    color:#E2D2BE;
+    text-shadow: 10px 10px #5C615D;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size:10px;
+    font-family:Arial;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px rgb(153, 153, 153);
+}
+
+.crop {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: static;
+    
+}
+
+.crop_square{
+    object-fit:cover;
+
+}
+
+
+/* body{
+    background-image: url("header.jpg");
+    max-width:100%;
+    height:auto;
+} */
+
+img{
+    width:100%;
+    height:auto;
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+height: 100%;
+margin: 0;
+font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+background-color:rgb(60, 71, 60);
+color: white;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+font-size: 17px;
+font-family:Impact, Charcoal, sans-serif;
+width: 25%;
+}
+
+.tablink:hover {
+background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+color: white;
+display: none;
+padding: 100px 20px;
+font-family:Impact, Charcoal, sans-serif;
+/*height: 100%;*/
+}
+
+#Home {background-color: #A2B4A8;}
+#DanceCategories {background-color: #A2B4A8;}
+#Contact {background-color: #A2B4A8;}
+#About {background-color: #A2B4A8;}
+
+
+/*dance categories*/
+
+.row {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+-ms-flex: 33%; /* IE10 */
+flex: 33%;
+max-width: 33%;
+padding: 0 4px;
+}
+
+.column img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+.column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+}
+}
+
+/*******************/
+/*individual photos*/
+/*******************/
+.zoom {
+    position: relative;
+    /* transition: transform .2s; Animation */
+}
+
+.image {
+opacity: 1;
+display: block;
+width: 100%;
+height: auto;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+
+/* .zoom:hover {
+transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+/* }
+ */ 
+
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+
+/* .danceCategories_text {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+color: rgb(255, 255, 255);
+padding: 16px 32px;
+font-size: 60px;
+font-family:Impact, Charcoal, sans-serif;
+/* opacity: 0.85; */
+/* } */ 
+.zoom:hover .image {
+opacity: 0.5;
+transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoom:hover .middle {
+opacity: 1;
+}
+
+.text {
+color: white;
+font-size: 40px;
+padding: 16px 32px;
+}
+
+.a：link {
+    color: white;
+    text-decoration: none;
+}
